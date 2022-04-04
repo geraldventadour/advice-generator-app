@@ -167,7 +167,6 @@ select {
   transform: translate(-50%, -12.5%);
 }
 
-.advice__button:active,
 .advice__button:hover {
   box-shadow: 0px 0px 40px #53ffaa;
 }
