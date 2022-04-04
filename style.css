@@ -134,6 +134,7 @@ select {
   color: var(--neonGreen);
   font-size: 0.8125rem;
   text-transform: uppercase;
+  letter-spacing: 0.25em;
 }
 
 .advice__text {
