@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  --lightCyan: hsl(193, 38%, 86%);
+  --neonGreen: hsl(150, 100%, 66%);
+
+  --grayishBlue: hsl(217, 19%, 38%);
+  --darkGrayishBlue: hsl(217, 19%, 24%);
+  --darkBlue: hsl(218, 23%, 16%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  background-color: var(--darkBlue);
+  color: var(--lightCyan);
+  text-align: center;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus {
+  outline: 0.25rem dashed var(--neonGreen);
+  outline-offset: 0.25rem;
+}
+
+.box {
+  padding: var(--padding, 1.5rem);
+}
+
+.center {
+  margin-inline: auto;
+}
+
+.text-align\:center {
+  text-align: center;
+}
+
+.stack > * + * {
+  margin-block-start: 1.5rem;
+}
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.advice {
+  inline-size: min(91.4667%, 33.75rem);
+  background-color: var(--darkGrayishBlue);
+  border-radius: 1rem;
+  position: relative;
+}
+
+.advice__title {
+  color: var(--neonGreen);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+}
+
+.advice__text {
+  font-size: 1.75rem;
+}
+
+.advice__text::before {
+  content: open-quote;
+}
+
+.advice__text::after {
+  content: close-quote;
+}
+
+.advice__image {
+  margin-block: 1.5rem;
+}
+
+.advice__button {
+  display: grid;
+  place-items: center;
+  block-size: 4rem;
+  inline-size: 4rem;
+  background-color: var(--neonGreen);
+  border-radius: 50%;
+  border: none;
+  margin-block-start: 0;
+  cursor: pointer;
+  position: absolute;
+  inset: auto 50%;
+  transform: translate(-50%, -12.5%);
+}
+
+.advice__button:active,
+.advice__button:hover {
+  box-shadow: 0px 0px 40px #53ffaa;
+}
+
+@media screen and (min-width: 376px) {
+  .advice {
+    --padding: 3rem;
+  }
+
+  .advice__button {
+    transform: translate(-50%, 25%);
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js"></script>
+
+    <title>Frontend Mentor | Advice generator app</title>
+  </head>
+  <body>
+    <header class="sr-only"><h1>Advice generator app</h1></header>
+    <main>
+      <article class="advice box center stack" aria-live="assertive">
+        <h2 class="advice__title">Advice #<span class="advice-id"></span></h2>
+        <blockquote class="advice__text"></blockquote>
+
+        <img
+          class="advice__image"
+          src="images/pattern-divider-mobile.svg"
+          alt=""
+          srcset="
+            images/pattern-divider-mobile.svg  295w,
+            images/pattern-divider-desktop.svg 444w
+          "
+        />
+
+        <button class="advice__button">
+          <img
+            src="images/icon-dice.svg"
+            alt="Generate a new piece of advice"
+          />
+        </button>
+      </article>
+    </main>
+  </body>
+</html>
